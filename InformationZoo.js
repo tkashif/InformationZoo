@@ -1,3 +1,8 @@
+function FirstOpened() {
+    document.getElementById("AnimalList").selectedIndex = -1;
+    
+}
+
 function AnimalSelected() {
  var animalList = document.getElementById("AnimalList");
 var selectedAnimalIndex = animalList.selectedIndex;    
