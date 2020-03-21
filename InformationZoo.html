@@ -3,12 +3,14 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name = "viewpoint" content = "width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="InformationZoo.js"></script>
 	<title> Information Zoo </title>
 </head>
 <link rel = "stylesheet" href = "style.css">
 <body>
 	<h1>Welcome to the Information Zoo!</h1>
-	
+	<h2>Select an Animal</h2>
 	<select>
 		<option id='Canidae'>Canidae</option>
 		<option id='Felidae'>Felidae</option>
@@ -41,7 +43,6 @@
 		<option id='American buffalo (bison)'>American buffalo (bison)</option>
 		<option id='American robin'>American robin</option>
 		<option id='Amphibian'>Amphibian</option>
-		<option id='list'>list</option>
 		<option id='Anaconda'>Anaconda</option>
 		<option id='Angelfish'>Angelfish</option>
 		<option id='Anglerfish'>Anglerfish</option>
@@ -57,7 +58,6 @@
 		<option id='Armadillo'>Armadillo</option>
 		<option id='Arrow crab'>Arrow crab</option>
 		<option id='Asp'>Asp</option>
-		<option id='Ass (donkey)'>Ass (donkey)</option>
 		<option id='Baboon'>Baboon</option>
 		<option id='Badger'>Badger</option>
 		<option id='Bald eagle'>Bald eagle</option>
@@ -532,6 +532,28 @@
 		<option id='Yak'>Yak</option>
 		<option id='Water buffalo'>Water buffalo</option>
 	</select> 
+
+    <h3>You selected a ____</h3>
+    
+	<section id = "AnimalImage">
+		<figure>
+            <img src="techBackground.jpg" width="200" height="200">
+        <figcaption>This will be animal image</figcaption>
+        </figure>
+	</section>
+
+    <section id = "LearnMore">
+        <h3>Learn more about ____</h3>
+        <h4>Video</h4>
+        <section id = "AnimalVideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tJVI_V2oOFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>	
+
+        <h4>Wiki</h4>
+        <section id = "AnimalInfo">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+        </section>
+    </section>    
 	
 	
 	
