@@ -3,7 +3,6 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name = "viewpoint" content = "width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="InformationZoo.js"></script>
 	<title> Information Zoo </title>
 </head>
@@ -12,7 +11,7 @@
 	<h1>Welcome to the Information Zoo!</h1>
 	<h2>Select an Animal</h2>
     <!-- List credits to https://gist.github.com/atduskgreg/3cf8ef48cb0d29cf151bedad81553a54#file-animals-txt -->
-	<select>
+	<select id = "AnimalList" onchange="AnimalSelected();">
 		<option id='Canidae'>Canidae</option>
 		<option id='Felidae'>Felidae</option>
 		<option id='Cat'>Cat</option>
@@ -534,7 +533,7 @@
 		<option id='Water buffalo'>Water buffalo</option>
 	</select> 
 
-    <h3>You selected a ____</h3>
+    <h3 id = "YouSelected">You selected a ____</h3>
     
 	<section id = "AnimalImage">
 		<figure>
