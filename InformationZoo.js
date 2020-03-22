@@ -28,8 +28,27 @@ for (i = 0; i < animalList.options.length; i++) {
     document.getElementById("YouSelected").innerHTML = outputSelection;
     document.getElementById("LearnMoreAbout").innerHTML = outputLearnMore;
     
+    Wikipedia();
+    
 }
 
 function LetterIsVowel(letter) {
     return letter == "A" || letter == "E" || letter == "I" || letter == "O" || letter == "U"
+}
+
+function Wikipedia(){
+   var http = new XMLHttpRequest();
+    
+
+var url = 'https://jsonplaceholder.typicode.com/posts';
+
+
+http.open('GET', url);
+http.send()
+http.onreadystatechange=function(){
+   if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("AnimalInfo").innerHTML = http.response;
+   } 
+}
+
 }
