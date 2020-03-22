@@ -72,7 +72,7 @@ function formatAnimal(selectedAnimal) {
 function Newspaper(selectedAnimal) {
     var http = new XMLHttpRequest();
     //var url = GenerateNewspaperURL(selectedAnimal);
-    var url = "https://chroniclingamerica.loc.gov/search/titles/results/?terms=goat&format=json";
+    var url = GenerateNewspaperURL(selectedAnimal);
     
 http.onreadystatechange=function(){
    if (this.readyState == 4 && this.status == 200) {
