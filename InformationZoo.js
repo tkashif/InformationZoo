@@ -15,18 +15,24 @@ for (i = 0; i < animalList.options.length; i++) {
  var firstLetter = animalSelected[0];
  var outputSelection = "";
  var outputLearnMore = "" ;
+var outputArticlesAbout = "";
  if (LetterIsVowel(firstLetter)) {
         outputSelection = "You Selected an " + animalSelected;
         outputLearnMore = "Learn More About an " + animalSelected;
+        outputArticlesAbout = "Articles About an " + animalSelected;
+        
     }
     else {
         outputSelection = "You Selected a " + animalSelected;
         outputLearnMore = "Learn More About a " + animalSelected;
+        outputArticlesAbout = "Articles About a " + animalSelected;
     }
     
     
     document.getElementById("YouSelected").innerHTML = outputSelection;
     document.getElementById("LearnMoreAbout").innerHTML = outputLearnMore;
+    document.getElementById("ArticlesAbout").innerHTML = outputArticlesAbout;
+    
     
     Wikipedia(animalSelected);
     Newspaper(animalSelected);
