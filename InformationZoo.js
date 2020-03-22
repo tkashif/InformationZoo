@@ -40,15 +40,18 @@ function Wikipedia(){
    var http = new XMLHttpRequest();
     
 
-var url = 'https://jsonplaceholder.typicode.com/posts';
+var url = 'https://en.wikipedia.org/w/api.php?action=parse&page=Pet_door&prop=text&formatversion=2&format=json&origin=*';
 
-
-http.open('GET', url);
-http.send()
+    
 http.onreadystatechange=function(){
    if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("AnimalInfo").innerHTML = http.response;
+       alert("hello");
+       var data = JSON.parse(this.response);
+        document.getElementById("AnimalInfo").innerHTML = data["parse"]["text"];
    } 
 }
+
+http.open('GET', url, true);
+http.send();
 
 }
