@@ -29,6 +29,7 @@ for (i = 0; i < animalList.options.length; i++) {
     document.getElementById("LearnMoreAbout").innerHTML = outputLearnMore;
     
     Wikipedia(animalSelected);
+    Newspaper(animalSelected);
     
 }
 
@@ -38,7 +39,7 @@ function LetterIsVowel(letter) {
 
 function Wikipedia(selectedAnimal){
    var http = new XMLHttpRequest();
-    var url = GenerateURL(selectedAnimal);
+    var url = GenerateWikiURL(selectedAnimal);
     
 http.onreadystatechange=function(){
    if (this.readyState == 4 && this.status == 200) {
@@ -52,7 +53,11 @@ http.send();
 
 }
 
-function GenerateURL(selectedAnimal) {
+function GenerateWikiURL(selectedAnimal) {
+    return 'https://en.wikipedia.org/w/api.php?action=parse&page=' + formatAnimal(selectedAnimal) + '&prop=text&formatversion=2&format=json&origin=*';   
+}
+
+function formatAnimal(selectedAnimal) {
     splitSelectedAnimalArray = selectedAnimal.split(" ");
     formattedAnimal = ""
     for (i = 0; i < splitSelectedAnimalArray.length; i++) {
@@ -61,7 +66,44 @@ function GenerateURL(selectedAnimal) {
             formattedAnimal += "_"; 
         }
     }
-    return 'https://en.wikipedia.org/w/api.php?action=parse&page=' + formattedAnimal + '&prop=text&formatversion=2&format=json&origin=*';
+    return formattedAnimal;
+}
 
+function Newspaper(selectedAnimal) {
+    var http = new XMLHttpRequest();
+    //var url = GenerateNewspaperURL(selectedAnimal);
+    var url = "https://chroniclingamerica.loc.gov/search/titles/results/?terms=goat&format=json";
+    
+http.onreadystatechange=function(){
+   if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.response);
+        data = data["items"];
+       var htmlString = ""
+       for (i = 0; i < data.length; i++) {
+           currentData = data[i];
+           title = currentData["title"];
+           placeOfPublication = currentData["place_of_publication"];
+           rawUrl = currentData["url"];
+           // getting rid of .json
+           url = rawUrl.substring(0, rawUrl.length - 5)
+           htmlString += "Article #".bold().big() + (i+1).toString().bold().big() + "<br>"
+           htmlString += "Title: " + title + "<br>";
+           htmlString += "Place of publication: " + placeOfPublication + "<br>";
+           htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>" + "<br><br>";
+           
+       }
+       console.log(htmlString);
+        document.getElementById("Newspaper").innerHTML = htmlString;
+   } 
+}
+
+http.open('GET', url, true);
+http.send();
+
+    
+}
+
+function GenerateNewspaperURL(selectedAnimal) {
+    return "https://chroniclingamerica.loc.gov/search/titles/results/?terms=" + formatAnimal(selectedAnimal) + "&format=json";
     
 }
