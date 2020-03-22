@@ -60,7 +60,7 @@ http.send();
 }
 
 function GenerateWikiURL(selectedAnimal) {
-    return 'https://en.wikipedia.org/w/api.php?action=parse&page=' + formatAnimal(selectedAnimal) + '&prop=text&formatversion=2&format=json&origin=*';   
+    return 'https://en.wikipedia.org/w/api.php?action=parse&page=' + formatAnimal(selectedAnimal) + '&prop=text&formatversion=2&format=json&origin=*&section=0';   
 }
 
 function formatAnimal(selectedAnimal) {
