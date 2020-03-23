@@ -42,19 +42,24 @@ h3 {
 
 #logo {
     position: absolute;
-    top: 1.2em;
-    left: 1em;
+    top: 0.4em;
+    left: 0.8em;
 }
 
 #logo2 {
      position: absolute;
-    top: 1.2em;
-    right: 1em;
+    top: 0.4em;
+    right: 0.8em;
 }
 
 .fa-paw {
    color: green;
     font-size: 5vw; 
+}
+
+#title {
+    position: relative;
+    
 }
 
 
