@@ -42,14 +42,14 @@ h3 {
 
 #logo {
     position: absolute;
-    top: 0.4em;
-    left: 0.8em;
+    top: 1.7vw;
+    left: 3.5vw;
 }
 
 #logo2 {
      position: absolute;
-    top: 0.4em;
-    right: 0.8em;
+    top: 1.7vw;
+    right: 3.5vw;
 }
 
 .fa-paw {
@@ -66,13 +66,13 @@ h3 {
     padding: 0;
     margin: 0;
     font-family: fantasy;
-    font-size: 2em;
+    font-size: 4vw;
 }
 
 #AnimalList {
     align-content: center;
     text-align: center;
-    font-size: 1em;
+    font-size: 3vw;
     
 }
 
@@ -80,9 +80,13 @@ h3 {
     position: relative;
     background-color: lemonchiffon;
     display: inline-grid;
-    padding: 1em;
+    padding: 1vw;
     border-style: groove;
     text-align: center;
+}
+
+#YouSelected {
+    display: inline-block;
 }
 
 
