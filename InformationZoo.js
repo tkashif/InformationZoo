@@ -1,6 +1,5 @@
 function FirstOpened() {
     document.getElementById("AnimalList").selectedIndex = -1;
-    
 }
 
 function AnimalSelected() {

@@ -15,15 +15,16 @@ h1 {
     border-radius: 6.25vw;
     padding: 0.0625vw;
     border-color: lightgoldenrodyellow;
-    font-variant: small-caps
+    font-variant: small-caps;
 }
 
 #InfoZooTitle {
     text-decoration: underline;
-    text-shadow: 0.1875vw 0.125vw lightgreen
-    
-    
-    
+    text-shadow: 0.1875vw 0.125vw lightgreen;
+}
+
+#InfoZooTitle:hover {
+    color: red;
 }
 
 h3 {
@@ -37,6 +38,27 @@ h3 {
     font-style: italic;
     
 }
+
+
+#logo {
+    position: absolute;
+    top: 1.2em;
+    left: 1em;
+}
+
+#logo2 {
+     position: absolute;
+    top: 1.2em;
+    right: 1em;
+}
+
+.fa-paw {
+   color: green;
+    font-size: 5vw; 
+}
+
+
+
 
 
 

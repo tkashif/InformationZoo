@@ -5,11 +5,17 @@
 	<meta name = "viewpoint" content = "width=device-width, initial-scale=1">
 	<script src="InformationZoo.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f8d233f032.js" crossorigin="anonymous"></script>
 	<title> Information Zoo </title>
 </head>
 <link rel = "stylesheet" href = "style.css">
 <body onload = "FirstOpened()">
-	<h1>Welcome to the <span id = "InfoZooTitle">Information Zoo!</span></h1>
+	<section id = "title" >
+        <h1>Welcome to the <span id = "InfoZooTitle">Information Zoo!</span></h1>
+        <i id = "logo" class="fas fa-paw"></i>
+        <i id = "logo2" class="fas fa-paw"></i>
+    </section> 
+    <section id = "selectionSection">
 	<h2>Select an Animal</h2>
     <!-- List credits to https://gist.github.com/atduskgreg/3cf8ef48cb0d29cf151bedad81553a54#file-animals-txt -->
 	<select id = "AnimalList" onchange="AnimalSelected();">
@@ -533,7 +539,8 @@
 		<option id='Society finch'>Society finch</option>
 		<option id='Yak'>Yak</option>
 		<option id='Water buffalo'>Water buffalo</option>
-	</select> 
+	</select>
+    </section>    
 
     <h2 id = "YouSelected">You selected ... </h2>
      <h2 id = "LearnMoreAbout">Learn more about ...</h2>
