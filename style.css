@@ -95,11 +95,30 @@ h3 {
     position: absolute;
     border-style: ridge;
     border-radius: 5vw;
-    background-color: azure;
+    background-color: beige;
+    font-family: monospace;
 }
 
 #outerSelectionBox {
     position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+#LearnMoreAbout {
+    background-color: aliceblue;
+    border-style: dotted;
+    border-radius: 2vw;
+    font-family: "Arial";
+    
+}
+
+#WikiTitle, #ArticlesAbout {
+    background-color: bisque;
+    justify-content: center;
+    
 }
 
 
