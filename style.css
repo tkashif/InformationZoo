@@ -1,0 +1,45 @@
+body {
+	color: black;
+    background-color: floralwhite;
+    font-size: 100%;
+}
+
+h1 {
+    color: green;
+    font-size: 5vw;
+    text-align: center;
+    border-style: groove;
+    font-family: cursive;
+    border-width: 0.625vw;
+    background-color: beige;
+    border-radius: 6.25vw;
+    padding: 0.0625vw;
+    border-color: lightgoldenrodyellow;
+    font-variant: small-caps
+}
+
+#InfoZooTitle {
+    text-decoration: underline;
+    text-shadow: 0.1875vw 0.125vw lightgreen
+    
+    
+    
+}
+
+h3 {
+    text-align: center;
+    
+        
+}
+
+#YouSelected {
+    text-align: center;
+    font-style: italic;
+    
+}
+
+
+
+
+
+
