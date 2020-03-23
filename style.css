@@ -86,8 +86,23 @@ h3 {
 }
 
 #YouSelected {
-    display: inline-block;
+    text-align: center;
+    font-size: 3vw;
+    display: inline;
+    padding: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    border-style: ridge;
+    border-radius: 5vw;
+    background-color: azure;
 }
+
+#outerSelectionBox {
+    position: relative;
+}
+
+
 
 
 
