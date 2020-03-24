@@ -154,6 +154,14 @@ h2 {
     clear: both;
 }
 
+.articleBlurb:hover {
+    background-color: hotpink;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
 
 
 

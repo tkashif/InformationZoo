@@ -32,7 +32,7 @@ var outputArticlesAbout = "";
     document.getElementById("LearnMoreAbout").innerHTML = outputLearnMore;
     document.getElementById("ArticlesAbout").innerHTML = outputArticlesAbout;
     
-    
+    MakeVisible();
     Wikipedia(animalSelected);
     Newspaper(animalSelected);
     
@@ -113,5 +113,14 @@ http.send();
 
 function GenerateNewspaperURL(selectedAnimal) {
     return "https://chroniclingamerica.loc.gov/search/titles/results/?terms=" + formatAnimal(selectedAnimal) + "&format=json";
+    
+}
+
+function MakeVisible(){
+    var classElements = document.getElementsByClassName("invisible");
+    
+    for (i = 0; i < classElements.length; i++) {
+        classElements[i].style.visibility = "visible";
+    }
     
 }
