@@ -118,6 +118,10 @@ h2 {
 #WikiTitle, #ArticlesAbout {
     background-color: bisque;
     justify-content: center;
+    font-family: fantasy;
+    font-weight: bold;
+    text-decoration: underline;
+    
     
 }
 
@@ -145,6 +149,7 @@ h2 {
     overflow: scroll;
     box-sizing: border-box;
     max-height: 7vw;
+    font-family: cursive;
     
 }
 
@@ -160,6 +165,10 @@ h2 {
 
 .invisible {
     visibility: hidden;
+}
+
+footer {
+    float: right;
 }
 
 
