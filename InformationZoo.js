@@ -91,10 +91,13 @@ http.onreadystatechange=function(){
            rawUrl = currentData["url"];
            // getting rid of .json
            url = rawUrl.substring(0, rawUrl.length - 5)
+           htmlString += "<section class = articleBlurb>" 
            htmlString += "Article #".bold().big() + (i+1).toString().bold().big() + "<br>"
            htmlString += "Title: " + title + "<br>";
            htmlString += "Place of publication: " + placeOfPublication + "<br>";
-           htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>" + "<br><br>";
+           htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>";
+           htmlString += "</section>"
+           htmlString += "<br><br>";
            
        }
        console.log(htmlString);

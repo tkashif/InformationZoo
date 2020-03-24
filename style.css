@@ -127,6 +127,17 @@ h2 {
     border-color: red;
     border-radius: 5vw;
     padding: 3vw;
+    
+}
+
+.articleBlurb {
+    background-color: aliceblue;
+     border-style: groove;
+    border-color: red;
+    border-radius: 2vw;
+    padding: 2vw;
+    display: inline-block;
+    
 }
 
 
