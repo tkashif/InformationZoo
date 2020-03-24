@@ -121,6 +121,14 @@ h2 {
     
 }
 
+#AnimalInfo {
+   background-color: beige;
+    border-style: groove;
+    border-color: red;
+    border-radius: 5vw;
+    padding: 3vw;
+}
+
 
 
 
