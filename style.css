@@ -121,7 +121,7 @@ h2 {
     
 }
 
-#AnimalInfo {
+#AnimalInfo, #AllArticlesBox {
    background-color: beige;
     border-style: groove;
     border-color: red;
