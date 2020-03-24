@@ -97,7 +97,7 @@ http.onreadystatechange=function(){
            htmlString += "Place of publication: " + placeOfPublication + "<br>";
            htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>";
            htmlString += "</section>"
-           htmlString += "<br><br>";
+
            
        }
        console.log(htmlString);

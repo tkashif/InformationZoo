@@ -126,7 +126,7 @@ h2 {
     border-style: groove;
     border-color: red;
     border-radius: 5vw;
-    padding: 3vw;
+    font-size: 2vw;
     
 }
 
@@ -135,9 +135,22 @@ h2 {
      border-style: groove;
     border-color: red;
     border-radius: 2vw;
-    padding: 2vw;
     display: inline-block;
+    float: left;
+    padding: 1%;
+    font-size: 1vw;
+    width: 29.33%;
+    margin: 1%;
+    overflow: scroll;
+    box-sizing: border-box;
+    max-height: 7vw;
     
+}
+
+#AllArticlesBox:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 
