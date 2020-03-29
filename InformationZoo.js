@@ -1,6 +1,5 @@
 function FirstOpened() {
     document.getElementById("AnimalList").selectedIndex = -1;
-    
 }
 
 function AnimalSelected() {
@@ -33,7 +32,7 @@ var outputArticlesAbout = "";
     document.getElementById("LearnMoreAbout").innerHTML = outputLearnMore;
     document.getElementById("ArticlesAbout").innerHTML = outputArticlesAbout;
     
-    
+    MakeVisible();
     Wikipedia(animalSelected);
     Newspaper(animalSelected);
     
@@ -92,10 +91,13 @@ http.onreadystatechange=function(){
            rawUrl = currentData["url"];
            // getting rid of .json
            url = rawUrl.substring(0, rawUrl.length - 5)
+           htmlString += "<section class = articleBlurb>" 
            htmlString += "Article #".bold().big() + (i+1).toString().bold().big() + "<br>"
            htmlString += "Title: " + title + "<br>";
            htmlString += "Place of publication: " + placeOfPublication + "<br>";
-           htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>" + "<br><br>";
+           htmlString += "URL: " + "<a href = " + url + " target = _blank" + ">" + url + "</a>";
+           htmlString += "</section>"
+
            
        }
        console.log(htmlString);
@@ -111,5 +113,14 @@ http.send();
 
 function GenerateNewspaperURL(selectedAnimal) {
     return "https://chroniclingamerica.loc.gov/search/titles/results/?terms=" + formatAnimal(selectedAnimal) + "&format=json";
+    
+}
+
+function MakeVisible(){
+    var classElements = document.getElementsByClassName("invisible");
+    
+    for (i = 0; i < classElements.length; i++) {
+        classElements[i].style.visibility = "visible";
+    }
     
 }

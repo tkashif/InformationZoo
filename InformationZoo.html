@@ -5,35 +5,22 @@
 	<meta name = "viewpoint" content = "width=device-width, initial-scale=1">
 	<script src="InformationZoo.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f8d233f032.js" crossorigin="anonymous"></script>
 	<title> Information Zoo </title>
 </head>
 <link rel = "stylesheet" href = "style.css">
 <body onload = "FirstOpened()">
-	<h1>Welcome to the Information Zoo!</h1>
-	<h2>Select an Animal</h2>
+	<section id = "title" >
+        <h1>Welcome to the <span id = "InfoZooTitle">Information Zoo!</span></h1>
+        <i id = "logo" class="fas fa-paw"></i>
+        <i id = "logo2" class="fas fa-paw"></i>
+    </section> 
+    <section id = "outerSelectionBox">
+    <section id = "selectionSection">
+	<h2 id = "selectAnAnimal">Select an Animal</h2>
     <!-- List credits to https://gist.github.com/atduskgreg/3cf8ef48cb0d29cf151bedad81553a54#file-animals-txt -->
 	<select id = "AnimalList" onchange="AnimalSelected();">
 		<option id = "none"></option>
-        <option id='Canidae'>Canidae</option>
-		<option id='Felidae'>Felidae</option>
-		<option id='Cat'>Cat</option>
-		<option id='Cattle'>Cattle</option>
-		<option id='Dog'>Dog</option>
-		<option id='Donkey'>Donkey</option>
-		<option id='Goat'>Goat</option>
-		<option id='Guinea pig'>Guinea pig</option>
-		<option id='Horse'>Horse</option>
-		<option id='Pig'>Pig</option>
-		<option id='Rabbit'>Rabbit</option>
-		<option id='Fancy rat varieties'>Fancy rat varieties</option>
-		<option id='laboratory rat strains'>laboratory rat strains</option>
-		<option id='Sheep breeds'>Sheep breeds</option>
-		<option id='Water buffalo breeds'>Water buffalo breeds</option>
-		<option id='Chicken breeds'>Chicken breeds</option>
-		<option id='Duck breeds'>Duck breeds</option>
-		<option id='Goose breeds'>Goose breeds</option>
-		<option id='Pigeon breeds'>Pigeon breeds</option>
-		<option id='Turkey breeds'>Turkey breeds</option>
 		<option id='Aardvark'>Aardvark</option>
 		<option id='Aardwolf'>Aardwolf</option>
 		<option id='African buffalo'>African buffalo</option>
@@ -42,9 +29,8 @@
 		<option id='Albatross'>Albatross</option>
 		<option id='Alligator'>Alligator</option>
 		<option id='Alpaca'>Alpaca</option>
-		<option id='American buffalo (bison)'>American buffalo (bison)</option>
+		<option id='American bison'>American bison</option>
 		<option id='American robin'>American robin</option>
-		<option id='Amphibian'>Amphibian</option>
 		<option id='Anaconda'>Anaconda</option>
 		<option id='Angelfish'>Angelfish</option>
 		<option id='Anglerfish'>Anglerfish</option>
@@ -71,13 +57,11 @@
 		<option id='Bat'>Bat</option>
 		<option id='Beaked whale'>Beaked whale</option>
 		<option id='Bear'>Bear</option>
-		<option id='list'>list</option>
 		<option id='Beaver'>Beaver</option>
 		<option id='Bedbug'>Bedbug</option>
 		<option id='Bee'>Bee</option>
 		<option id='Beetle'>Beetle</option>
 		<option id='Bird'>Bird</option>
-		<option id='list'>list</option>
 		<option id='Bison'>Bison</option>
 		<option id='Blackbird'>Blackbird</option>
 		<option id='Black panther'>Black panther</option>
@@ -106,19 +90,16 @@
 		<option id='Caribou'>Caribou</option>
 		<option id='Carp'>Carp</option>
 		<option id='Cat'>Cat</option>
-		<option id='list'>list</option>
 		<option id='Catshark'>Catshark</option>
 		<option id='Caterpillar'>Caterpillar</option>
 		<option id='Catfish'>Catfish</option>
 		<option id='Cattle'>Cattle</option>
-		<option id='list'>list</option>
 		<option id='Centipede'>Centipede</option>
 		<option id='Cephalopod'>Cephalopod</option>
 		<option id='Chameleon'>Chameleon</option>
 		<option id='Cheetah'>Cheetah</option>
 		<option id='Chickadee'>Chickadee</option>
 		<option id='Chicken'>Chicken</option>
-		<option id='list'>list</option>
 		<option id='Chimpanzee'>Chimpanzee</option>
 		<option id='Chinchilla'>Chinchilla</option>
 		<option id='Chipmunk'>Chipmunk</option>
@@ -138,7 +119,6 @@
 		<option id='Crane fly'>Crane fly</option>
 		<option id='Crawdad'>Crawdad</option>
 		<option id='Crayfish'>Crayfish</option>
-		<option id='Cricket'>Cricket</option>
 		<option id='Crocodile'>Crocodile</option>
 		<option id='Crow'>Crow</option>
 		<option id='Cuckoo'>Cuckoo</option>
@@ -147,18 +127,14 @@
 		<option id='Deer'>Deer</option>
 		<option id='Dingo'>Dingo</option>
 		<option id='Dinosaur'>Dinosaur</option>
-		<option id='list'>list</option>
 		<option id='Dog'>Dog</option>
-		<option id='list'>list</option>
 		<option id='Dolphin'>Dolphin</option>
 		<option id='Donkey'>Donkey</option>
-		<option id='list'>list</option>
 		<option id='Dormouse'>Dormouse</option>
 		<option id='Dove'>Dove</option>
 		<option id='Dragonfly'>Dragonfly</option>
 		<option id='Dragon'>Dragon</option>
 		<option id='Duck'>Duck</option>
-		<option id='list'>list</option>
 		<option id='Dung beetle'>Dung beetle</option>
 		<option id='Eagle'>Eagle</option>
 		<option id='Earthworm'>Earthworm</option>
@@ -186,9 +162,7 @@
 		<option id='Frog'>Frog</option>
 		<option id='Fruit bat'>Fruit bat</option>
 		<option id='Gamefowl'>Gamefowl</option>
-		<option id='list'>list</option>
 		<option id='Galliform'>Galliform</option>
-		<option id='list'>list</option>
 		<option id='Gazelle'>Gazelle</option>
 		<option id='Gecko'>Gecko</option>
 		<option id='Gerbil'>Gerbil</option>
@@ -198,10 +172,8 @@
 		<option id='Gila monster'>Gila monster</option>
 		<option id='Giraffe'>Giraffe</option>
 		<option id='Goat'>Goat</option>
-		<option id='list'>list</option>
 		<option id='Goldfish'>Goldfish</option>
 		<option id='Goose'>Goose</option>
-		<option id='list'>list</option>
 		<option id='Gopher'>Gopher</option>
 		<option id='Gorilla'>Gorilla</option>
 		<option id='Grasshopper'>Grasshopper</option>
@@ -212,12 +184,9 @@
 		<option id='Ground sloth'>Ground sloth</option>
 		<option id='Grouse'>Grouse</option>
 		<option id='Guan'>Guan</option>
-		<option id='list'>list</option>
 		<option id='Guanaco'>Guanaco</option>
 		<option id='Guineafowl'>Guineafowl</option>
-		<option id='list'>list</option>
 		<option id='Guinea pig'>Guinea pig</option>
-		<option id='list'>list</option>
 		<option id='Gull'>Gull</option>
 		<option id='Guppy'>Guppy</option>
 		<option id='Haddock'>Haddock</option>
@@ -235,7 +204,6 @@
 		<option id='Hookworm'>Hookworm</option>
 		<option id='Hornet'>Hornet</option>
 		<option id='Horse'>Horse</option>
-		<option id='list'>list</option>
 		<option id='Hoverfly'>Hoverfly</option>
 		<option id='Hummingbird'>Hummingbird</option>
 		<option id='Humpback whale'>Humpback whale</option>
@@ -281,7 +249,6 @@
 		<option id='Macaw'>Macaw</option>
 		<option id='Mackerel'>Mackerel</option>
 		<option id='Magpie'>Magpie</option>
-		<option id='Mammal'>Mammal</option>
 		<option id='Manatee'>Manatee</option>
 		<option id='Mandrill'>Mandrill</option>
 		<option id='Manta ray'>Manta ray</option>
@@ -339,7 +306,6 @@
 		<option id='Pheasant'>Pheasant</option>
 		<option id='Pig'>Pig</option>
 		<option id='Pigeon'>Pigeon</option>
-		<option id='list'>list</option>
 		<option id='Pike'>Pike</option>
 		<option id='Pilot whale'>Pilot whale</option>
 		<option id='Pinniped'>Pinniped</option>
@@ -364,14 +330,11 @@
 		<option id='Quelea'>Quelea</option>
 		<option id='Quokka'>Quokka</option>
 		<option id='Rabbit'>Rabbit</option>
-		<option id='list'>list</option>
 		<option id='Raccoon'>Raccoon</option>
 		<option id='Rainbow trout'>Rainbow trout</option>
 		<option id='Rat'>Rat</option>
 		<option id='Rattlesnake'>Rattlesnake</option>
 		<option id='Raven'>Raven</option>
-		<option id='Ray (Batoidea)'>Ray (Batoidea)</option>
-		<option id='Ray (Rajiformes)'>Ray (Rajiformes)</option>
 		<option id='Red panda'>Red panda</option>
 		<option id='Reindeer'>Reindeer</option>
 		<option id='Reptile'>Reptile</option>
@@ -395,9 +358,7 @@
 		<option id='Sea slug'>Sea slug</option>
 		<option id='Sea snail'>Sea snail</option>
 		<option id='Shark'>Shark</option>
-		<option id='list'>list</option>
 		<option id='Sheep'>Sheep</option>
-		<option id='list'>list</option>
 		<option id='Shrew'>Shrew</option>
 		<option id='Shrimp'>Shrimp</option>
 		<option id='Silkworm'>Silkworm</option>
@@ -409,7 +370,6 @@
 		<option id='Smelt'>Smelt</option>
 		<option id='Snail'>Snail</option>
 		<option id='Snake'>Snake</option>
-		<option id='list'>list</option>
 		<option id='Snipe'>Snipe</option>
 		<option id='Snow leopard'>Snow leopard</option>
 		<option id='Sockeye salmon'>Sockeye salmon</option>
@@ -455,7 +415,6 @@
 		<option id='Trout'>Trout</option>
 		<option id='Tuna'>Tuna</option>
 		<option id='Turkey'>Turkey</option>
-		<option id='list'>list</option>
 		<option id='Turtle'>Turtle</option>
 		<option id='Tyrannosaurus'>Tyrannosaurus</option>
 		<option id='Urial'>Urial</option>
@@ -491,66 +450,29 @@
 		<option id='Yellow perch'>Yellow perch</option>
 		<option id='Zebra'>Zebra</option>
 		<option id='Zebra finch'>Zebra finch</option>
-		<option id='Animals by number of neurons'>Animals by number of neurons</option>
-		<option id='Animals by size'>Animals by size</option>
-		<option id='Common household pests'>Common household pests</option>
-		<option id='Common names of poisonous animals'>Common names of poisonous animals</option>
-		<option id='Alpaca'>Alpaca</option>
-		<option id='Bali cattle'>Bali cattle</option>
-		<option id='Cat'>Cat</option>
-		<option id='Cattle'>Cattle</option>
-		<option id='Chicken'>Chicken</option>
-		<option id='Dog'>Dog</option>
-		<option id='Domestic Bactrian camel'>Domestic Bactrian camel</option>
-		<option id='Domestic canary'>Domestic canary</option>
-		<option id='Domestic dromedary camel'>Domestic dromedary camel</option>
-		<option id='Domestic duck'>Domestic duck</option>
-		<option id='Domestic goat'>Domestic goat</option>
-		<option id='Domestic goose'>Domestic goose</option>
-		<option id='Domestic guineafowl'>Domestic guineafowl</option>
-		<option id='Domestic hedgehog'>Domestic hedgehog</option>
-		<option id='Domestic pig'>Domestic pig</option>
-		<option id='Domestic pigeon'>Domestic pigeon</option>
-		<option id='Domestic rabbit'>Domestic rabbit</option>
-		<option id='Domestic silkmoth'>Domestic silkmoth</option>
-		<option id='Domestic silver fox'>Domestic silver fox</option>
-		<option id='Domestic turkey'>Domestic turkey</option>
-		<option id='Donkey'>Donkey</option>
-		<option id='Fancy mouse'>Fancy mouse</option>
-		<option id='Fancy rat'>Fancy rat</option>
-		<option id='Lab rat'>Lab rat</option>
-		<option id='Ferret'>Ferret</option>
-		<option id='Gayal'>Gayal</option>
-		<option id='Goldfish'>Goldfish</option>
-		<option id='Guinea pig'>Guinea pig</option>
-		<option id='Guppy'>Guppy</option>
-		<option id='Horse'>Horse</option>
-		<option id='Koi'>Koi</option>
-		<option id='Llama'>Llama</option>
-		<option id='Ringneck dove'>Ringneck dove</option>
-		<option id='Sheep'>Sheep</option>
-		<option id='Siamese fighting fish'>Siamese fighting fish</option>
-		<option id='Society finch'>Society finch</option>
-		<option id='Yak'>Yak</option>
-		<option id='Water buffalo'>Water buffalo</option>
-	</select> 
+	</select>
+    </section>    
 
-    <h2 id = "YouSelected">You selected ... </h2>
-     <h2 id = "LearnMoreAbout">Learn more about ...</h2>
-        <h3>Wiki</h3>
-        <section id = "AnimalInfo">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+    <h2 class = "invisible" id = "YouSelected">You selected ... </h2>
+    </section>
+     <h2 class = "invisible" id = "LearnMoreAbout">Learn more about ...</h2>
+        <h2 class = "invisible" id = "WikiTitle">Wiki</h2>
+        <section class = "invisible" id = "AnimalInfo">
+           
         </section>
     
-    <h3 id = "ArticlesAbout">Articles About ...</h3>
-    <section id = "Newspaper">
-		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-	</section>
+        <h2 class = "invisible" id = "ArticlesAbout">Articles About ...</h2>
+        <section class = "invisible" id = "AllArticlesBox">
+        <section id = "Newspaper">
+            
+        </section>
+        </section>    
 	
 	
 	
 
 	<footer>
+        <br>
 		<div> &copy; Taimur Kashif</div>
 	</footer>
 

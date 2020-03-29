@@ -1,0 +1,183 @@
+body {
+	color: black;
+    background-color: floralwhite;
+    font-size: 100%;
+}
+
+h1 {
+    color: green;
+    font-size: 5vw;
+    text-align: center;
+    border-style: groove;
+    font-family: cursive;
+    border-width: 0.625vw;
+    background-color: beige;
+    border-radius: 6.25vw;
+    padding: 0.0625vw;
+    border-color: lightgoldenrodyellow;
+    font-variant: small-caps;
+}
+
+#InfoZooTitle {
+    text-decoration: underline;
+    text-shadow: 0.1875vw 0.125vw lightgreen;
+}
+
+#InfoZooTitle:hover {
+    color: red;
+}
+
+h3 {
+    text-align: center;
+    
+        
+}
+
+#YouSelected {
+    text-align: center;
+    font-style: italic;
+    
+}
+
+
+#logo {
+    position: absolute;
+    top: 1.7vw;
+    left: 3.5vw;
+}
+
+#logo2 {
+     position: absolute;
+    top: 1.7vw;
+    right: 3.5vw;
+}
+
+.fa-paw {
+   color: green;
+    font-size: 5vw; 
+}
+
+#title {
+    position: relative;
+    
+}
+
+#selectAnAnimal {
+    padding: 0;
+    margin: 0;
+    font-family: fantasy;
+    font-size: 4vw;
+}
+
+#AnimalList {
+    align-content: center;
+    text-align: center;
+    font-size: 3vw;
+    
+}
+
+#selectionSection {
+    position: relative;
+    background-color: lemonchiffon;
+    display: inline-grid;
+    padding: 1vw;
+    border-style: groove;
+    text-align: center;
+}
+
+#YouSelected {
+    text-align: center;
+    font-size: 3vw;
+    display: inline;
+    padding: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    border-style: ridge;
+    border-radius: 5vw;
+    background-color: beige;
+    font-family: monospace;
+}
+
+#outerSelectionBox {
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+#LearnMoreAbout {
+    background-color: aliceblue;
+    border-style: dotted;
+    border-radius: 2vw;
+    font-family: "Arial";
+    
+}
+
+#WikiTitle, #ArticlesAbout {
+    background-color: bisque;
+    justify-content: center;
+    font-family: fantasy;
+    font-weight: bold;
+    text-decoration: underline;
+    
+    
+}
+
+#AnimalInfo, #AllArticlesBox {
+   background-color: beige;
+    border-style: groove;
+    border-color: red;
+    border-radius: 5vw;
+    font-size: 2vw;
+    padding: 2%;
+    
+}
+
+.articleBlurb {
+    background-color: aliceblue;
+     border-style: groove;
+    border-color: red;
+    border-radius: 2vw;
+    display: inline-block;
+    float: left;
+    padding: 1%;
+    font-size: 1vw;
+    width: 29.33%;
+    margin: 1%;
+    overflow: scroll;
+    box-sizing: border-box;
+    max-height: 7vw;
+    font-family: cursive;
+    
+}
+
+#AllArticlesBox:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.articleBlurb:hover {
+    background-color: hotpink;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+footer {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
