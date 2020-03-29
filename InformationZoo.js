@@ -10,7 +10,8 @@ for (i = 0; i < animalList.options.length; i++) {
     animalListArray[i] = animalList.options[i].value;
 }
     
- var animalSelected = animalListArray[selectedAnimalIndex];    
+if (selectedAnimalIndex != 0) { 
+var animalSelected = animalListArray[selectedAnimalIndex];    
  var firstLetter = animalSelected[0];
  var outputSelection = "";
  var outputLearnMore = "" ;
@@ -35,6 +36,7 @@ var outputArticlesAbout = "";
     MakeVisible();
     Wikipedia(animalSelected);
     Newspaper(animalSelected);
+}
     
 }
 
