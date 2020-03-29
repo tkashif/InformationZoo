@@ -52,16 +52,33 @@ http.onreadystatechange=function(){
    if (this.readyState == 4 && this.status == 200) {
        var data = JSON.parse(this.response);
         document.getElementById("AnimalInfo").innerHTML = data["parse"]["text"];
+        MakeWikiLinksClickable();   
    } 
 }
 
 http.open('GET', url, true);
 http.send();
+     
 
 }
 
 function GenerateWikiURL(selectedAnimal) {
     return 'https://en.wikipedia.org/w/api.php?action=parse&page=' + formatAnimal(selectedAnimal) + '&prop=text&formatversion=2&format=json&origin=*&section=0';   
+}
+
+function MakeWikiLinksClickable() {
+    console.log("Hostname: " + location.host);
+    var hostLength = location.host.length;
+    var httpsLength = "http://".length;
+    var linkStartIndex = hostLength + httpsLength;
+    var wikiLinks = document.getElementById("AnimalInfo").querySelectorAll('a');
+    for (i = 0; i < wikiLinks.length; i++) {
+        var fullLink = wikiLinks[i].href;
+        var endOfLink = fullLink.substring(linkStartIndex, fullLink.length);
+        wikiLinks[i].href = 'https://en.wikipedia.org' + endOfLink;
+        console.log(wikiLinks[i].href);
+    }
+    
 }
 
 function formatAnimal(selectedAnimal) {
@@ -78,7 +95,6 @@ function formatAnimal(selectedAnimal) {
 
 function Newspaper(selectedAnimal) {
     var http = new XMLHttpRequest();
-    //var url = GenerateNewspaperURL(selectedAnimal);
     var url = GenerateNewspaperURL(selectedAnimal);
     
 http.onreadystatechange=function(){
@@ -102,7 +118,6 @@ http.onreadystatechange=function(){
 
            
        }
-       console.log(htmlString);
         document.getElementById("Newspaper").innerHTML = htmlString;
    } 
 }
