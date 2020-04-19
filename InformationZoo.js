@@ -73,12 +73,14 @@ function MakeWikiLinksClickable() {
     var linkStartIndex = hostLength + httpsLength;
     var wikiLinks = document.getElementById("AnimalInfo").querySelectorAll('a');
     var wikiNotChangeLinks = document.getElementsByClassName("external text");
+    var compareIndex = 0;
     for (i = 0; i < wikiLinks.length; i++) {
-        if (!wikiNotChangeLinks.includes(wikiLinks[i])) {
+        if (wikiNotChangeLinks[compareIndex] != wikiLinks[i]) {
             var fullLink = wikiLinks[i].href;
             var endOfLink = fullLink.substring(linkStartIndex, fullLink.length);
             wikiLinks[i].href = 'https://en.wikipedia.org' + endOfLink;
-            console.log(wikiLinks[i].href);
+        } else {
+            compareIndex++;
         }
     }
     
