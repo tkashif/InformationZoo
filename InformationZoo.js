@@ -90,7 +90,7 @@ function MakeWikiLinksClickable() {
     var wikiLinks = document.getElementsByTagName('a');
     for (i = 0; i < wikiLinks.length; i++) {
         console.log(wikiLinks[i].href);
-        if(wikiLinks[i].href.includes("/wiki")) {
+        if(wikiLinks[i].href.includes("/wiki/") || wikiLinks[i].href.includes("/w/")) {
             var fullLink = wikiLinks[i].href;
             var endOfLink = fullLink.substring(linkStartIndex, fullLink.length);
             wikiLinks[i].href = 'https://en.wikipedia.org' + endOfLink;
