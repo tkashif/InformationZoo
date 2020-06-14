@@ -67,7 +67,8 @@ function GenerateWikiURL(selectedAnimal) {
 
 function MakeWikiLinksClickable() {
     var hostLength = location.host.length;
-    var httpsLength = "http://".length;
+    console.log(location.host);
+    var httpsLength = "https://".length;
     var linkStartIndex = hostLength + httpsLength;
     var wikiLinks = document.getElementsByTagName('a');
     for (i = 0; i < wikiLinks.length; i++) {
