@@ -67,7 +67,7 @@ function GenerateWikiURL(selectedAnimal) {
 }
 
 function MakeWikiLinksClickable() {
-    console.log("Hostname: " + location.host);
+    /*console.log("Hostname: " + location.host);
     var hostLength = location.host.length;
     var httpsLength = "http://".length;
     var linkStartIndex = hostLength + httpsLength;
@@ -82,8 +82,20 @@ function MakeWikiLinksClickable() {
         } else {
             compareIndex++;
         }
-    }
+    } */
     
+    var hostLength = location.host.length;
+    var httpsLength = "http://".length;
+    var linkStartIndex = hostLength + httpsLength;
+    var wikiLinks = document.getElementsByTagName('a');
+    for (i = 0; i < wikiLinks.length; i++) {
+        console.log(wikiLinks[i].href);
+        if(wikiLinks[i].href.includes("/wiki")) {
+            var fullLink = wikiLinks[i].href;
+            var endOfLink = fullLink.substring(linkStartIndex, fullLink.length);
+            wikiLinks[i].href = 'https://en.wikipedia.org' + endOfLink;
+        }
+    }
 }
 
 function formatAnimal(selectedAnimal) {
